@@ -1,0 +1,50 @@
+.flText {
+  text-align: center;
+  color: inherit;
+  opacity: 0;
+  transition: all 1s ease;
+  width: 45%;
+  padding-top: 60px;
+  @include sm-dp{
+    width: 80%;
+  }
+
+  .firLine {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+  }
+  .secLine {
+    font-size: 2rem;
+  }
+  .thiLine {
+    font-size: 1.3rem;
+  }
+  .fouLine {
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+  a {
+    &:link, &:visited {
+      text-decoration: none; 
+      color: inherit;
+    }
+    &:hover {
+      & .underLine{
+        width: 0;
+      }
+    }
+
+    .underLine{
+        content: '';
+        height: 2px;
+        border: none;
+        margin:10px 0;
+        margin-left: auto;
+        margin-right:auto;
+        width: 100%;
+        transition: all 1s ease;
+        background-color:white; 
+    }
+  }
+}

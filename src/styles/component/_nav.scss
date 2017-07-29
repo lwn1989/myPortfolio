@@ -1,0 +1,126 @@
+.navbar {
+  z-index: 1; 
+  height: 99px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+
+  #firstNav {
+    color: white;
+    background: rgba(255, 255, 255, 0);
+  }
+
+  @include sm-dp {
+    height: 60px;
+    line-height: 60px;
+  }
+  .toggle-icon {
+    display: none;
+    @include sm-dp {
+      display: initial;
+      margin-left: 2rem;
+      color: white;
+    }
+  }
+  .mainNav {
+    list-style: none;
+    margin: 0;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 250px;
+    padding:40px;
+    @include sm-dp {
+      display: none;
+    }
+    li {
+      a {
+        &:link, &:visited {
+          text-decoration: none; 
+          color: inherit;
+        };
+
+        &:hover {
+          & + .sp{
+            width: 100%;
+          }
+        }
+      }
+      .sp {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: -5px;
+        height: 2px;
+        width: 0;
+        transition: all 0.5s ease;
+        background: black;
+      }
+    }
+  }
+  .name {
+    font-size: 1.2rem;
+    position: relative;
+    letter-spacing: 2px;
+    left: calc(100% - 465px);
+    @include sm-dp {
+      left: calc(100% - 180px);
+    }
+  }
+  .secNav {
+    position:fixed;
+    width: 100%;
+    transition: all 0.5s ease-out; 
+    font-size: 1.5rem;
+    text-align: center;
+    height: calc(100vh - 60px);
+    background: rgba(255,255,255,0.95);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      width: 200px;
+    }
+
+    .listTitle {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: black;
+      border: none;
+    }
+    ul {
+      list-style: none;
+      margin:0;
+      padding: 0;
+      li {
+        a {
+          padding-bottom: 10px;
+          display:inline-block;
+          &:link, &:visited {
+            text-decoration: none; 
+            color: #1a1a1a;
+          }; 
+          &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width:0;
+            transition: all 0.5s ease;
+            background: #1a1a1a;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
+}

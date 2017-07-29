@@ -1,0 +1,109 @@
+.about {
+  width: 100%;
+  height: 75vh;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media (max-width:1175px) {
+    height: 800px;
+  }
+  @include sm-dp {
+    height: 1300px;
+  }
+
+  .photo {
+    margin: 0 1rem;
+    width: 250px;
+    opacity: 0.1;
+    transition: all 1s ease;
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    @media (max-width: 1175px) {
+      position: relative;
+      width: 300px;
+      top: 100px;
+    }
+    @include sm-dp {
+      width: 400px;
+      position: initial;
+    }
+  }
+
+  .discription {
+    margin: 0 1rem;
+    width: 400px;
+    font-size: 1.1rem;
+    height: 340px;
+    .title {
+      font-weight: bold;
+      i {
+        margin-right: 1rem;
+      }
+    }
+    @media (max-width: 1175px) {
+      width: 390px;
+    }
+    @include sm-dp {
+      height: 300px;
+    } 
+  }
+
+  .skills {
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    width: 400px;
+    @media (max-width: 1175px) {
+      position: relative;
+      width: 390px;
+      top: -80px;
+      left: 165px;
+    }
+    
+    @include sm-dp {
+      position: initial;
+    }
+  
+
+    .title {
+      font-weight: bold;
+      i {
+        margin-right: 1rem;
+      }
+    }
+    .skillList {
+      list-style: none;
+      margin: 0;
+      margin-top: 3rem;
+      padding: 0;
+
+      li {
+        height: 5px;
+        border-radius:3px; 
+        background: #e6e6e6;
+        margin-bottom: 2.3rem;
+
+        span {
+          position: relative;
+          top: -25px;
+        }
+        .underline {
+          height: 5px;
+          background: black;
+          border-radius:3px; 
+          border:none;
+          width: 0;
+          position: relative;
+          top: -20px;
+          transition: width 1.5s ease;
+        }
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,20 @@
+@import "./mixins/mixins";
+@import "./component/_nav.scss";
+@import "./component/_cover.scss";
+@import "./component/_about.scss";
+@import "./component/_portfolio.scss";
+@import "./component/_floatingText.scss";
+@import "./component/_singleProject.scss";
+@import "./component/_footer.scss";
+
+html {
+}
+
+body {
+  margin:0;
+  -webkit-overflow-scrolling: touch;
+}
+
+#app {
+  font-family: 'Dosis', sans-serif;
+}

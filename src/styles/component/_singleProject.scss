@@ -1,0 +1,22 @@
+.singleProject {
+  .blankSp {
+    height: 150px;
+    width: 100%;
+  }
+  .rellaxContainer {
+    position: relative;
+    height: 60vh;
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+
+    .rellaxDiv {
+      z-index: -1;
+      height: 100%;
+      position: absolute;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+}
