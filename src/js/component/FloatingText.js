@@ -4,7 +4,8 @@ export default class FloatingText extends React.Component {
   isScrolledIntoView (el) {
     var elemTop = el.getBoundingClientRect().top
     var elemBottom = el.getBoundingClientRect().bottom
-    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight)
+    // var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight)
+    var isVisible = (elemTop >= -50) && (elemBottom <= window.innerHeight + 200)
     return isVisible
   }
   componentDidMount () {
