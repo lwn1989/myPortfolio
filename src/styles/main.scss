@@ -8,6 +8,10 @@
 @import "./component/_footer.scss";
 
 html {
+  font-size: 16px;
+  @include sm-dp {
+    font-size: 13px;
+  } 
 }
 
 body {
