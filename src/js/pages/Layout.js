@@ -16,16 +16,24 @@ class Layout extends React.Component {
   componentDidMount =() => {
     this.rellax = new Rellax('.rellax', {center: true})
     window.addEventListener('resize', this.updateDimensions)
+    if (window.innerWidth < 768) {
+      this.rellax.destroy()
+    }
   }
   componentWillUnmount= () => {
     window.removeEventListener('resize', this.updateDimensions)
   }
   updateDimensions= () => {
-    this.rellax.destroy()
+    if (window.innerWidth >= 768) {
+      this.rellax.destroy()
+    }
     this.setState({width: window.innerWidth, height: window.innerHeight})
   }
+
   componentDidUpdate (_, prevState) {
-    this.rellax = new Rellax('.rellax', {center: true})
+    if (window.innerWidth >= 768) {
+      this.rellax = new Rellax('.rellax', {center: true})
+    }
   }
   render () {
     return (
